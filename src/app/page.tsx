@@ -2,14 +2,15 @@
 
 import Image from "next/image";
 import {
+  BookOpenCheck,
   CalendarDays,
   CheckCircle2,
   Clock,
   HeartHandshake,
+  Mail,
   MessageCircle,
   Phone,
   QrCode,
-  ShieldCheck,
   Sparkles,
   UploadCloud,
   UsersRound,
@@ -17,22 +18,50 @@ import {
 import { useMemo, useState } from "react";
 
 const whatsappGroupLink = "https://chat.whatsapp.com/YourSummerSlokaCamp";
-
-const schedule = [
-  ["Day 1", "Meet the teacher, posture, breathing, and first easy sloka"],
-  ["Day 2", "Meaning through stories, repeat-after-me chanting"],
-  ["Day 3", "Pronunciation games and confidence practice"],
-  ["Day 4", "Memory tricks, hand actions, and mini recitation"],
-  ["Day 5", "Two useful daily slokas with simple meanings"],
-  ["Day 6", "Parent preview practice and doubt clearing"],
-  ["Day 7", "Celebration, final recitation, and participation e-certificate"],
-];
+const contactPhone = "7995531535";
+const contactEmail = "csarts1535@gmail.com";
 
 const classHighlights = [
-  "Small evening batch for personal attention",
-  "Simple word-by-word meaning, not rote pressure",
-  "Fun repetition, actions, stories, and audio support",
-  "Designed for kids aged 5 to 12 years",
+  "One month online camp with 4 evening classes every week",
+  "Simple slokas taught with meaning, pronunciation, and daily use",
+  "Friendly teaching style for kids from 5 to 15 years",
+  "Small practice activities that help children speak with confidence",
+];
+
+const kidFriendlyContent = [
+  {
+    title: "Learn with stories",
+    copy: "Children understand each sloka through short stories and simple examples.",
+  },
+  {
+    title: "Speak clearly",
+    copy: "Every class includes slow chanting, repeat practice, and pronunciation support.",
+  },
+  {
+    title: "Enjoy the routine",
+    copy: "Kids get actions, memory games, and small recitation turns to keep learning active.",
+  },
+  {
+    title: "Feel proud",
+    copy: "Parents can see children slowly become comfortable saying slokas at home.",
+  },
+];
+
+const mentors = [
+  {
+    name: "Chaitra Sri Polana",
+    role: "Sloka camp mentor",
+    image: "/images/mentor-chaitra.jpeg",
+    alt: "Chaitra Sri Polana, mentor for Sloka Summer Camp",
+    copy: "Guides children with simple English explanations, calm practice, and friendly correction.",
+  },
+  {
+    name: "Camp Mentor",
+    role: "Student support and practice guide",
+    image: "/images/mentor-medical.jpeg",
+    alt: "Mentor for Sloka Summer Camp",
+    copy: "Supports kids with confidence, discipline, and steady practice during the camp.",
+  },
 ];
 
 export default function Home() {
@@ -53,17 +82,17 @@ export default function Home() {
           alt="Children learning with a teacher in a classroom"
           fill
           priority
-          className="object-cover opacity-42"
+          className="object-cover opacity-40"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(23,63,58,0.94)_0%,rgba(23,63,58,0.74)_48%,rgba(23,63,58,0.24)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(23,63,58,0.95)_0%,rgba(23,63,58,0.75)_52%,rgba(23,63,58,0.28)_100%)]" />
         <div className="relative mx-auto flex min-h-[92vh] max-w-7xl flex-col justify-between px-5 py-6 sm:px-8 lg:px-10">
           <nav className="flex items-center justify-between gap-4">
             <a href="#" className="flex items-center gap-3">
               <span className="grid size-11 place-items-center rounded-full bg-[#f8b84e] text-xl font-black text-[#173f3a]">
-                ॐ
+                S
               </span>
               <span className="text-base font-semibold sm:text-lg">
-                Summer Sloka Camp
+                Sloka Summer Camp
               </span>
             </a>
             <a
@@ -75,19 +104,19 @@ export default function Home() {
             </a>
           </nav>
 
-          <div className="grid gap-10 pb-10 pt-16 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
+          <div className="grid gap-10 pb-10 pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
             <div className="max-w-3xl">
               <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/14 px-4 py-2 text-sm font-semibold backdrop-blur">
                 <Sparkles size={17} aria-hidden="true" />
-                1 week online evening classes for kids
+                1 month online evening classes for kids
               </p>
               <h1 className="max-w-4xl text-5xl font-black leading-[1.03] tracking-normal sm:text-6xl lg:text-7xl">
-                Easy Sloka Classes for Curious Kids
+                Simple Sloka Classes Kids Will Enjoy
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/88 sm:text-xl">
-                A gentle summer camp where children learn simple Sanskrit
-                slokas with clear pronunciation, stories, actions, and meanings
-                they can proudly recite at home.
+                A warm online camp where children learn slokas in easy English,
+                practise pronunciation, understand the meaning, and build a calm
+                daily habit.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
@@ -98,19 +127,19 @@ export default function Home() {
                   Pay & Join Batch
                 </a>
                 <a
-                  href="#details"
+                  href="#contact"
                   className="inline-flex items-center gap-2 rounded-full border border-white/35 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/12"
                 >
-                  <CalendarDays size={18} aria-hidden="true" />
-                  See Details
+                  <Phone size={18} aria-hidden="true" />
+                  Contact
                 </a>
               </div>
             </div>
 
             <div className="grid gap-3 rounded-2xl border border-white/18 bg-white/12 p-4 backdrop-blur-md sm:grid-cols-3 lg:mb-2">
-              <Stat icon={<Clock />} title="Evening" value="6:30 PM" />
-              <Stat icon={<CalendarDays />} title="Duration" value="7 Days" />
-              <Stat icon={<UsersRound />} title="Age" value="5-12 yrs" />
+              <Stat icon={<Clock />} title="Time" value="4:30-6 PM" />
+              <Stat icon={<CalendarDays />} title="Duration" value="1 Month" />
+              <Stat icon={<UsersRound />} title="Age" value="5-15 yrs" />
             </div>
           </div>
         </div>
@@ -120,15 +149,15 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-10">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#c06628]">
-              About the camp
+              About the classes
             </p>
             <h2 className="mt-3 text-3xl font-black leading-tight text-[#173f3a] sm:text-4xl">
-              Built for happy learning, not heavy memorising.
+              A gentle way for children to learn culture with confidence.
             </h2>
             <p className="mt-5 text-lg leading-8 text-[#56616f]">
-              Each class keeps the language simple. Children hear the sloka,
-              understand the meaning in everyday words, practise in small
-              steps, and finish with a short confidence activity.
+              The classes are made for beginners. Kids do not need any previous
+              Sanskrit knowledge. We teach slowly, explain clearly, and help
+              every child practise without pressure.
             </p>
             <div className="mt-8 grid gap-3">
               {classHighlights.map((item) => (
@@ -150,12 +179,12 @@ export default function Home() {
             <ImagePanel
               src="/images/guided-learning.jpg"
               alt="Teacher guiding kids in a classroom activity"
-              label="Guided practice"
+              label="Friendly teaching"
             />
             <ImagePanel
               src="/images/mala-book.jpg"
               alt="Prayer beads on an open book"
-              label="Meaningful chants"
+              label="Simple sloka practice"
             />
           </div>
         </div>
@@ -165,38 +194,42 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#0d7f75]">
-              What kids learn
+              Why kids like it
             </p>
             <h2 className="mt-3 text-3xl font-black text-[#173f3a] sm:text-4xl">
-              A simple 7-day rhythm parents can trust.
+              Learning feels light, active, and happy.
             </h2>
+            <p className="mt-5 text-lg leading-8 text-[#56616f]">
+              We focus on simple content that children can remember and use.
+              Parents get a peaceful learning activity, and kids get a class
+              that feels friendly instead of difficult.
+            </p>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {schedule.map(([day, topic]) => (
+            {kidFriendlyContent.map((item) => (
               <article
-                key={day}
+                key={item.title}
                 className="rounded-lg border border-[#b9ded5] bg-white p-5 shadow-sm"
               >
-                <p className="text-sm font-black text-[#c06628]">{day}</p>
-                <h3 className="mt-3 text-lg font-bold leading-6 text-[#173f3a]">
-                  {topic}
+                <BookOpenCheck
+                  className="text-[#0d7f75]"
+                  size={24}
+                  aria-hidden="true"
+                />
+                <h3 className="mt-4 text-lg font-black leading-6 text-[#173f3a]">
+                  {item.title}
                 </h3>
+                <p className="mt-3 text-sm leading-6 text-[#56616f]">
+                  {item.copy}
+                </p>
               </article>
             ))}
-            <article className="rounded-lg bg-[#173f3a] p-5 text-white shadow-sm">
-              <ShieldCheck size={24} aria-hidden="true" />
-              <h3 className="mt-3 text-lg font-bold">After camp support</h3>
-              <p className="mt-2 text-sm leading-6 text-white/78">
-                Parents receive practice tips and the class WhatsApp group after
-                payment proof is uploaded.
-              </p>
-            </article>
           </div>
         </div>
       </section>
 
       <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-10 lg:items-center">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:px-10 lg:items-center">
           <div className="overflow-hidden rounded-lg">
             <Image
               src="/images/kids-classroom.jpg"
@@ -208,28 +241,122 @@ export default function Home() {
           </div>
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#c06628]">
-              For parents and kids
+              For parents
             </p>
             <h2 className="mt-3 text-3xl font-black leading-tight text-[#173f3a] sm:text-4xl">
-              Give your child a calm, confident evening routine.
+              A useful evening class that builds discipline and joy.
             </h2>
             <p className="mt-5 text-lg leading-8 text-[#56616f]">
-              The sessions are short, friendly, and interactive. Kids get the
-              joy of learning something traditional, while parents see steady
-              practice without stress.
+              Classes are held 4 days a week from 4:30 PM to 6:00 PM. The
+              monthly fee is only Rs. 499, making it easy for families to give
+              children a meaningful summer learning experience.
             </p>
             <div className="mt-7 grid gap-4 sm:grid-cols-2">
               <MiniFeature
                 icon={<HeartHandshake />}
                 title="Parent-friendly"
-                copy="Clear updates, easy practice, and doubt support."
+                copy="Easy updates, clear instructions, and a simple payment process."
               />
               <MiniFeature
                 icon={<Sparkles />}
                 title="Kid-friendly"
-                copy="Actions, stories, and recitation turns keep it lively."
+                copy="Stories, actions, chanting practice, and gentle correction."
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#fffaf1] py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#c06628]">
+              Mentors
+            </p>
+            <h2 className="mt-3 text-3xl font-black leading-tight text-[#173f3a] sm:text-4xl">
+              Caring mentors for steady practice.
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {mentors.map((mentor) => (
+              <article
+                key={mentor.image}
+                className="grid gap-5 rounded-lg border border-[#ecd5a1] bg-white p-5 shadow-sm sm:grid-cols-[180px_1fr] sm:items-center"
+              >
+                <Image
+                  src={mentor.image}
+                  alt={mentor.alt}
+                  width={360}
+                  height={420}
+                  className="aspect-[4/5] w-full rounded-md object-cover object-top"
+                />
+                <div>
+                  <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0d7f75]">
+                    {mentor.role}
+                  </p>
+                  <h3 className="mt-2 text-2xl font-black text-[#173f3a]">
+                    {mentor.name}
+                  </h3>
+                  <p className="mt-3 text-base leading-7 text-[#56616f]">
+                    {mentor.copy}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="bg-[#e9f7f2] py-16 sm:py-20">
+        <div className="mx-auto grid max-w-7xl gap-6 px-5 sm:px-8 lg:grid-cols-2 lg:px-10">
+          <div className="rounded-lg border border-[#b9ded5] bg-white p-6 shadow-sm">
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#0d7f75]">
+              Contact for doubts
+            </p>
+            <h2 className="mt-3 text-3xl font-black text-[#173f3a]">
+              Talk to us before joining.
+            </h2>
+            <p className="mt-4 text-base leading-7 text-[#56616f]">
+              For class doubts, batch details, payment questions, or age group
+              questions, parents can contact us directly.
+            </p>
+            <div className="mt-6 grid gap-3">
+              <a
+                href={`tel:${contactPhone}`}
+                className="inline-flex items-center gap-3 rounded-md border border-[#d6e0e8] px-4 py-3 font-bold text-[#173f3a] transition hover:border-[#0d7f75]"
+              >
+                <Phone size={20} aria-hidden="true" />
+                {contactPhone}
+              </a>
+              <a
+                href={`mailto:${contactEmail}`}
+                className="inline-flex items-center gap-3 rounded-md border border-[#d6e0e8] px-4 py-3 font-bold text-[#173f3a] transition hover:border-[#0d7f75]"
+              >
+                <Mail size={20} aria-hidden="true" />
+                {contactEmail}
+              </a>
+            </div>
+          </div>
+
+          <div className="rounded-lg border border-[#e1b862] bg-[#fff3cf] p-6 shadow-sm">
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#c06628]">
+              Doubts message box
+            </p>
+            <label className="mt-4 block">
+              <span className="text-sm font-bold text-[#173f3a]">
+                Write your question
+              </span>
+              <textarea
+                name="doubtMessage"
+                rows={7}
+                placeholder="Example: My child is 6 years old. Can they join? What days are the classes?"
+                className="mt-2 w-full rounded-md border border-[#d3aa58] bg-white px-4 py-3 text-sm outline-none transition focus:border-[#0d7f75] focus:ring-4 focus:ring-[#0d7f75]/15"
+              />
+            </label>
+            <p className="mt-3 text-sm leading-6 text-[#6a7480]">
+              This box is only for writing doubts. Use the phone or email above
+              to send the message.
+            </p>
           </div>
         </div>
       </section>
@@ -241,10 +368,10 @@ export default function Home() {
               Payment details
             </p>
             <h2 className="mt-3 text-3xl font-black text-[#173f3a] sm:text-4xl">
-              Pay first, upload proof, then join WhatsApp.
+              Pay Rs. 499, upload proof, then join WhatsApp.
             </h2>
             <p className="mt-5 text-lg leading-8 text-[#56616f]">
-              Scan the code or use the UPI details below. The WhatsApp group
+              Scan the code or use the payment details below. The WhatsApp group
               button unlocks only after the transaction screenshot is uploaded.
             </p>
 
@@ -252,7 +379,7 @@ export default function Home() {
               <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
                 <Image
                   src="/payment-qr.svg"
-                  alt="Payment QR scanner for Summer Sloka Camp"
+                  alt="Payment QR scanner for Sloka Summer Camp"
                   width={190}
                   height={190}
                   className="rounded-md border border-[#d9e1e8] bg-white"
@@ -265,15 +392,15 @@ export default function Home() {
                   <dl className="mt-4 grid gap-3 text-sm text-[#2f3b47]">
                     <div>
                       <dt className="font-bold">Amount</dt>
-                      <dd>Rs. 499 for 1 week</dd>
-                    </div>
-                    <div>
-                      <dt className="font-bold">UPI ID</dt>
-                      <dd>slokacamp@upi</dd>
+                      <dd>Rs. 499 for 1 month</dd>
                     </div>
                     <div>
                       <dt className="font-bold">Payee name</dt>
-                      <dd>Summer Sloka Camp</dd>
+                      <dd>Chaitra Sri Polana</dd>
+                    </div>
+                    <div>
+                      <dt className="font-bold">Contact</dt>
+                      <dd>{contactPhone}</dd>
                     </div>
                   </dl>
                 </div>
@@ -288,6 +415,9 @@ export default function Home() {
               setSubmitted(true);
             }}
           >
+            <p className="mb-5 text-sm font-bold uppercase tracking-[0.22em] text-[#0d7f75]">
+              Registration form
+            </p>
             <div className="grid gap-4 sm:grid-cols-2">
               <Field label="Student name" name="student" required />
               <Field label="Parent name" name="parent" required />
@@ -296,21 +426,16 @@ export default function Home() {
                 name="phone"
                 type="tel"
                 required
-                placeholder="+91 98765 43210"
+                placeholder="7995531535"
               />
-              <Field label="Child age" name="age" type="number" min="5" max="12" />
+              <Field
+                label="Child age"
+                name="age"
+                type="number"
+                min="5"
+                max="15"
+              />
             </div>
-            <label className="mt-4 block">
-              <span className="text-sm font-bold text-[#173f3a]">
-                Doubts or message
-              </span>
-              <textarea
-                name="message"
-                rows={4}
-                placeholder="Tell us about preferred batch, pronunciation doubts, or anything we should know."
-                className="mt-2 w-full rounded-md border border-[#ccd6dd] px-4 py-3 text-sm outline-none transition focus:border-[#0d7f75] focus:ring-4 focus:ring-[#0d7f75]/15"
-              />
-            </label>
 
             <label className="mt-4 block rounded-lg border border-dashed border-[#0d7f75] bg-[#f1fbf8] p-4">
               <span className="flex items-center gap-3 text-sm font-bold text-[#173f3a]">
@@ -369,10 +494,9 @@ export default function Home() {
 
       <footer className="bg-[#173f3a] px-5 py-8 text-sm text-white/72 sm:px-8 lg:px-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p>Summer Sloka Camp for Kids. Evening online batch.</p>
+          <p>Sloka Summer Camp. Online evening classes for ages 5 to 15.</p>
           <p>
-            Photos sourced from Pexels. Replace sample UPI and WhatsApp link
-            with your real details before publishing.
+            Contact {contactPhone} or {contactEmail} for doubts before joining.
           </p>
         </div>
       </footer>

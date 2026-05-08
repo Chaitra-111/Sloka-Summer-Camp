@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Summer Sloka Camp for Kids",
+  title: "Sloka Summer Camp",
   description:
-    "A one-week online evening sloka class for kids with simple chanting, meanings, payment upload, and WhatsApp group access.",
+    "A one-month online evening sloka class for kids aged 5 to 15 with simple chanting, meanings, mentor support, payment upload, and WhatsApp group access.",
 };
 
 export default function RootLayout({
