@@ -1,38 +1,40 @@
 # Sloka Summer Camp
 
-A Next.js and Tailwind CSS landing page for a one-month online evening sloka summer camp for kids.
+A responsive, elegant, and spiritually-themed summer camp landing website for children and parents. Built with vanilla HTML5, CSS3, and JavaScript for maximum performance and simplicity.
 
 ## Features
 
-- Parent-friendly class information for 1 month, 4 days a week
-- Kid-focused content with teaching and sloka-themed images
-- Mentor section with camp guide photos
-- Payment details with a QR scanner placeholder
-- Separate contact and doubts sections
-- Registration form for student, parent, phone number, age, and payment screenshot upload
-- WhatsApp group button that unlocks only after payment proof is uploaded
+- **Devotional Aesthetic:** A peaceful and welcoming design with a traditional Indian cultural feel.
+- **Mentors Section:** Featuring dedicated guides with professional profiles and consistent, high-quality portraits.
+- **Registration Form:** Integrated with **FormSubmit.co (AJAX)** for direct email notifications of new enrollments.
+- **Responsive Navigation:** Optimized for both desktop and mobile, with a persistent "Register Now" call-to-action.
+- **Interactive Elements:** FAQ accordion, testimonial slider, and a lightbox gallery for high engagement.
+- **SEO Optimized:** Semantic HTML and meta tags for better search visibility.
+
+## Project Structure
+
+- `index.html`: Main website structure.
+- `styles.css`: Modern CSS with custom design tokens and responsive layouts.
+- `app.js`: Clean vanilla JavaScript for interactive components and form handling.
+- `assets/`: 
+  - `images/`: Optimized images, including the custom SVG logo and mentor portraits.
 
 ## Getting Started
 
-Install dependencies:
+Since this is a static website, no build step is required.
 
-```bash
-npm install
+1. Clone the repository.
+2. Open `index.html` directly in any modern web browser.
+3. Alternatively, serve it using any simple static server (e.g., `python -m http.server`).
+
+## Backend Configuration
+
+The registration form uses **FormSubmit.co**. To update the destination email, modify the following line in `app.js`:
+
+```javascript
+fetch('https://formsubmit.co/ajax/YOUR_EMAIL@gmail.com', { ... })
 ```
 
-Run the development server:
+## Credits
 
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Customize Before Publishing
-
-Update these placeholders in `src/app/page.tsx` and `public/payment-qr.svg`:
-
-- WhatsApp group invite link
-- Payment details
-- Payment QR scanner
-- Camp fee, timing, and contact details
+Developed with a focus on peace, devotion, and cultural education for the next generation.
